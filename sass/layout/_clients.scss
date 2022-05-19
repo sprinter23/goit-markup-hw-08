@@ -1,23 +1,42 @@
 .clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.7;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-bottom: 50px;
-}
-
-.clients-list__item + .clients-list__item {
-  margin-left: 30px;
+  margin-bottom: 30px;
+  @include decktop {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+
+  &__item {
+    width: 210px;
+    height: 92px;
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    @include tablet {
+      width: 226px;
+      width: calc(100% / 3 - 30px);
+    }
+    @include decktop {
+      width: 170px;
+      width: calc(100% / 6 - 30px);
+    }
+  }
 
   &__link {
-    width: 170px;
+    width: 100%;
     height: 92px;
     background-color: var(--main-bg-color);
     border: 1px solid var(--icon-color);

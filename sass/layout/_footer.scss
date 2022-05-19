@@ -3,20 +3,41 @@
   padding-top: 60px;
   padding-bottom: 60px;
   .container {
-    display: flex;
-    align-items: baseline;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @include decktop {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+    }
   }
 }
 
 .footer-main {
-  margin-right: 70px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+  @include tablet {
+    width: 232px;
+  }
+  @include decktop {
+    text-align: left;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .footer-logo {
   margin-bottom: 20px;
-  max-width: 231px;
   & span {
     color: var(--accent-color);
+  }
+  @include decktop {
+    max-width: 231px;
   }
 }
 
@@ -28,7 +49,10 @@
   letter-spacing: 0.03em;
 
   &__list {
-    width: 231px;
+    width: 100%;
+    @include decktop {
+      width: 231px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -52,7 +76,17 @@
 }
 
 .footer-join {
-  margin-right: 93px;
+  text-align: center;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-left: 165px;
+  }
+  @include decktop {
+    text-align: left;
+    margin-right: 93px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .join__title {
@@ -66,8 +100,15 @@
 }
 
 .subscription {
+  text-align: center;
+  @include decktop {
+    text-align: left;
+  }
+
   &__form {
-    display: flex;
+    @include decktop {
+      display: flex;
+    }
   }
 
   &__title {
@@ -81,9 +122,12 @@
   }
 
   &__btn {
-    display: flex;
-    align-items: center;
+    margin: 0 auto;
     padding: 10px 29px;
+    @include decktop {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__icon {
@@ -92,7 +136,7 @@
   }
 
   &__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
     background-color: transparent;
     padding-left: 10px;
@@ -104,5 +148,13 @@
     margin-right: 12px;
     position: relative;
     outline: none;
+    margin-bottom: 20px;
+    @include tablet {
+      width: 450px;
+    }
+    @include decktop {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 }

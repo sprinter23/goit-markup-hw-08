@@ -1,4 +1,22 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include decktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.about {
+  display: none;
+
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include decktop {
+    display: block;
+  }
 }

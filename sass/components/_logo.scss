@@ -1,10 +1,14 @@
 .logo {
   font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.37;
   letter-spacing: 0.03em;
   display: block;
+  @include decktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   &--light {
     color: var(--primary-color);
