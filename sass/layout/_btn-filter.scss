@@ -1,10 +1,14 @@
 .button-filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @include tablet {
+    margin-bottom: 30px;
     justify-content: center;
     flex-wrap: nowrap;
+  }
+  @include decktop {
+    margin-bottom: 50px;
   }
 
   &__item {

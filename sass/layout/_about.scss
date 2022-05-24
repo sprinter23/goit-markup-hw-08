@@ -14,7 +14,10 @@
     width: calc(100% / 3 - 30px);
     margin-left: 30px;
   }
-
+  &__img {
+    width: 370px;
+    height: 294px;
+  }
   &__thumb {
     position: relative;
     display: flex;

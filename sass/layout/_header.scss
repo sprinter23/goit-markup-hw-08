@@ -248,11 +248,14 @@
     }
   }
   &__link {
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 12) + 12px);
     font-weight: 500;
-    font-size: 4vw;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
     margin-right: 10px;
+    @include mobile {
+      font-size: 18px;
+    }
   }
 }

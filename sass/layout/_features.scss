@@ -1,5 +1,8 @@
 .features {
-  padding-bottom: 60;
+  padding-bottom: 60px;
+  @include decktop {
+    padding-bottom: 0;
+  }
 }
 
 .features-list {
