@@ -39,13 +39,6 @@
 
   &__img {
     width: 100%;
-    height: 460px;
-    @include tablet {
-      height: 374px;
-    }
-    @include decktop {
-      height: 260px;
-    }
   }
 
   &__content {
